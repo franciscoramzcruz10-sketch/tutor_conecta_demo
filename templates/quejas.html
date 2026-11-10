@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quejas - Tutor Conecta</title>
+    <style>
+        :root {
+            --azul: #1d4ed8;
+            --azul-oscuro: #1e3a8a;
+            --azul-claro: #e0efff;
+            --rojo: #dc2626;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: var(--azul-claro);
+            color: var(--azul-oscuro);
+            text-align: center;
+        }
+
+        header {
+            background: var(--azul);
+            color: white;
+            padding: 25px;
+            border-bottom: 5px solid var(--rojo);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+        }
+
+        main {
+            margin: 50px auto;
+            padding: 30px;
+            max-width: 900px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #1d4ed826;
+        }
+
+        h2 {
+            color: var(--azul);
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            margin: 8px auto 0;
+            background: var(--rojo);
+        }
+
+        .tabla-envoltura {
+            overflow-x: auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 15px auto;
+            width: 100%;
+        }
+
+        th {
+            background: var(--azul);
+            color: white;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #bfdbfe;
+        }
+
+        tbody tr:nth-child(even) td {
+            background: #f0f7ff;
+        }
+
+        .rojo {
+            color: var(--rojo);
+            font-weight: bold;
+        }
+
+        .nota {
+            margin-top: 15px;
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 13px 25px;
+            margin-top: 30px;
+            background: var(--azul);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .boton:hover {
+            background: var(--azul-oscuro);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Tutor Conecta</h1>
+        <p>Conectando familias</p>
+    </header>
+
+    <main>
+
+        <h2>Quejas y comentarios de mejora</h2>
+
+        <div class="tabla-envoltura">
+            <table border="1" cellpadding="6">
+                <thead>
+                    <tr>
+                        <th>Número de control</th>
+                        <th>Nombre</th>
+                        <th>Grupo</th>
+                        <th>Semestre</th>
+                        <th>Comentarios de mejora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>25415082210054</td>
+                        <td>Maximiliano</td>
+                        <td>304</td>
+                        <td>1</td>
+                        <td>Participar más en la clase de Inglés.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <a class="boton" href="{{ url_for('panel_principal') }}">Volver al panel principal</a>
+
+    </main>
+
+</body>
+</html>

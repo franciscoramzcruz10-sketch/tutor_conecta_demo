@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Conecta</title>
+    <style>
+        :root {
+            --azul: #1d4ed8;
+            --azul-oscuro: #1e3a8a;
+            --azul-claro: #e0efff;
+            --rojo: #dc2626;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: var(--azul-claro);
+            color: var(--azul-oscuro);
+            text-align: center;
+        }
+
+        header {
+            background: var(--azul);
+            color: white;
+            padding: 25px;
+            border-bottom: 5px solid var(--rojo);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+        }
+
+        main {
+            margin: 80px auto;
+            padding: 30px;
+            max-width: 600px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #1d4ed826;
+        }
+
+        h2 {
+            color: var(--azul);
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            margin: 8px auto 0;
+            background: var(--rojo);
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 13px 25px;
+            margin: 10px;
+            background: var(--azul);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .boton:hover {
+            background: var(--azul-oscuro);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Tutor Conecta</h1>
+        <p>Conectando familias</p>
+    </header>
+
+    <main>
+        <h2>¡Bienvenido a Tutor Conecta!</h2>
+
+        <p>
+            Aprende, comparte conocimientos y encuentra
+            el apoyo académico que necesitas.
+        </p>
+
+        <a class="boton" href="{{ url_for('registro') }}">
+            Registrarse
+        </a>
+
+        <a class="boton" href="{{ url_for('inicio_sesion') }}">
+            Iniciar sesión
+        </a>
+    </main>
+
+</body>
+</html>

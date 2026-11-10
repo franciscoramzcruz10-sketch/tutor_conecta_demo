@@ -1,0 +1,9 @@
+/* Mensaje de error del formulario */
+.error {
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 10px;
+    border-radius: 6px;
+    margin: 15px 0 0;
+    text-align: center;
+}
